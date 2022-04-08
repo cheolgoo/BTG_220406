@@ -22,7 +22,7 @@ buy_num     = 0
 
 sum_n       = 3
 sum_perc    = 0.94/100
-up          = 0.6/100
+up          = 0.66/100
 num_limit   = 6.7* 60 /5 
 
 
@@ -61,6 +61,8 @@ while True:
             sum_check = np.sum( delta ) 
 
             if (sum_check < -open[-1]*sum_perc)  & (buy_count == 0) :  
+                    
+                    time.sleep(5)
 
                     balance     = upbit.get_balance("KRW")
 
